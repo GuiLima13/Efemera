@@ -13,7 +13,12 @@ const homeController = {
             "/imagens/slider2.jpg"
         ]
         res.render('index',{title: 'Home' , listaServicos: servicos, carousel: slider});
+    },
+    news: (req,res)=>{
+        let {nomeNews, emailNews} = req.body;
+        res.render('news',{nomeNews,title: 'Home'});
     }
+    
 }
 
 module.exports = homeController;
