@@ -1,0 +1,31 @@
+<%- include('./partials/header')%>
+
+<section id="newsletter">
+    <h1>Newsletter</h1>
+<div class="listar">
+    <% listaNews.forEach((news)=>{%>
+        <div class="list">
+        <span><strong>Nome: </strong></span>
+        <span><%=news.nomeNews%></span>
+        <span><strong>Email: </strong></span>
+        <span><%=news.email%></span>
+        </div>
+        <%})%>
+</div>
+<h1>Contatos</h1>
+<div class="listar">
+    <% listaContatos.forEach((contato)=>{%>
+        <div class="list">
+        <span><strong>Nome: </strong></span>
+        <span><%=contato.nomeC%></span>
+        <span><strong>Email: </strong></span>
+        <span><%=contato.email%></span>
+        <span><strong>Mensagem: </strong></span>
+        <p><%=contato.mensagemC%></p>
+        </div>
+        <%})%>
+</div>
+
+</section>
+
+<%- include('./partials/footer')%>
